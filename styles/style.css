@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --title-txt: 'Big Shoulders Display', cursive;
+    --second-txt: 'Lexend Deca', sans-serif;
+    --bg-bright-orange: hsl(31, 77%, 52%);
+    --bg-dark-cyan: hsl(184, 100%, 22%);
+    --bg-very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white-para: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--very-light-gray);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    border: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 40px;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+.top {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.title {
+    font-family: var(--title-txt);
+    text-transform: uppercase;
+    color: var(--very-light-gray);
+    font-size: 2rem;
+}
+
+.description {
+    font-family: var(--second-txt);
+    font-weight: 400;
+    color: var(--transparent-white-para);
+    font-size: .7rem;
+    line-height: 1.2rem;
+}
+
+.sedan {
+    background: var(--bg-bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.suvs {
+    background: var(--bg-dark-cyan);
+}
+
+.luxury {
+    background: var(--bg-very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.btn {
+    border: 2px solid var(--very-light-gray);
+    background: var(--very-light-gray);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: var(--second-txt);
+    font-weight: 400;
+}
+
+.sedan .btn {
+    color: var(--bg-bright-orange);
+}
+
+.suvs .btn {
+    color: var(--bg-dark-cyan);
+}
+
+.luxury .btn {
+    color: var(--bg-very-dark-cyan);
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--very-light-gray);
+}
+
+@media (max-width: 425px) {
+    .container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .box {
+        gap: 20px;
+        padding: 30px;
+    }
+
+    .sedan {
+        border-radius: 10px 10px 0 0;
+    }
+
+    .luxury {
+        border-radius: 0 0 10px 10px;
+    }
+}
