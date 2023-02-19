@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: []()
+- Solution URL: [Solution](https://hombreombre.github.io/3-column-preview-card-component---FM/)
 
 ### Built with
 
